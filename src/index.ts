@@ -1,6 +1,9 @@
-import { createApp, provide } from '@tramvai/core';
+import { createApp, provide, Scope } from '@tramvai/core';
 import { CommonModule } from '@tramvai/module-common';
-import { SpaRouterModule, ROUTER_SPA_ACTIONS_RUN_MODE_TOKEN } from '@tramvai/module-router';
+import {
+  SpaRouterModule,
+  ROUTER_SPA_ACTIONS_RUN_MODE_TOKEN,
+} from '@tramvai/module-router';
 import {
   DEFAULT_FOOTER_COMPONENT,
   DEFAULT_HEADER_COMPONENT,
@@ -10,7 +13,7 @@ import {
   ResourceSlot,
   ResourceType,
 } from '@tramvai/module-render';
-import { ServerModule } from '@tramvai/module-server';
+import { ServerModule, PROXY_CONFIG_TOKEN } from '@tramvai/module-server';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -73,5 +76,20 @@ createApp({
         },
       },
     }),
+    // proxy static assets from /public/ app endpoint, codesandbox specific
+    {
+      provide: PROXY_CONFIG_TOKEN,
+      scope: Scope.SINGLETON,
+      multi: true,
+      useFactory: () => {
+        return {
+          context: '/public/',
+          target: `http://localhost:4000/dist/client/`,
+          pathRewrite: (path: string) => {
+            return path.replace('/public/', '/');
+          },
+        };
+      },
+    },
   ],
 });

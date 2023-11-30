@@ -2,9 +2,9 @@
   "name": "tramvai-records",
   "license": "MIT",
   "scripts": {
-    "start": "tramvai start tramvai-records",
-    "build": "tramvai build tramvai-records",
-    "preview": "tramvai start-prod tramvai-records",
+    "start": "ASSETS_PREFIX=${SANDBOX_URL}public/ tramvai start tramvai-records",
+    "build": "ASSETS_PREFIX=${SANDBOX_URL}public/ tramvai build tramvai-records",
+    "preview": "ASSETS_PREFIX=${SANDBOX_URL}public/ tramvai start-prod tramvai-records",
     "analyze": "tramvai analyze tramvai-records",
     "lint": "eslint --ext .ts,.tsx --ignore-path .gitignore ."
   },

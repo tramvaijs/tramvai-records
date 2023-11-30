@@ -8,8 +8,8 @@ Run installation with selected package manager `yarn`
 
 ## Usage
 
-- `npm start` - run development server
-- `npm build` - production build
+- `yarn start` - run development server
+- `yarn build` - production build
 
 ## Project structure
 
