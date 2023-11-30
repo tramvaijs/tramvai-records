@@ -1,0 +1,55 @@
+{
+  "name": "tramvai-records",
+  "license": "MIT",
+  "scripts": {
+    "start": "tramvai start tramvai-records",
+    "build": "tramvai build tramvai-records",
+    "preview": "tramvai start-prod tramvai-records",
+    "analyze": "tramvai analyze tramvai-records",
+    "lint": "eslint --ext .ts,.tsx --ignore-path .gitignore ."
+  },
+  "devDependencies": {
+    "@tinkoff/eslint-config": "^2.0.0",
+    "@tinkoff/eslint-config-react": "^2.0.0",
+    "@tinkoff/eslint-plugin-tramvai": "^0.6.7",
+    "@tramvai/cli": "^3.12.0",
+    "@tramvai/swc-integration": "3.12.0",
+    "@types/react": "^18.2.39",
+    "husky": "^4",
+    "lint-staged": "^15.1.0",
+    "postcss-custom-media": "^10.0.2",
+    "postcss-custom-properties": "^13.3.2",
+    "postcss-modules-values-replace": "^4.1.0",
+    "prettier-config-tinkoff": "^0.2.4",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@tinkoff/layout-factory": "0.4.1",
+    "@tramvai/core": "^3.12.0",
+    "@tramvai/module-common": "^3.12.0",
+    "@tramvai/module-error-interceptor": "^3.12.0",
+    "@tramvai/module-render": "^3.12.0",
+    "@tramvai/module-router": "^3.12.0",
+    "@tramvai/module-seo": "^3.12.0",
+    "@tramvai/module-server": "^3.12.0",
+    "@tramvai/react": "^3.12.0",
+    "@tramvai/state": "^3.12.0",
+    "@tramvai/tokens-common": "^3.12.0",
+    "@tramvai/tokens-render": "^3.12.0",
+    "@tramvai/tokens-router": "^3.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tslib": "^2.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
+}
