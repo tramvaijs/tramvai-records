@@ -77,10 +77,9 @@ createApp({
       },
     }),
     // proxy static assets from /public/ app endpoint, codesandbox specific
-    {
+    provide({
       provide: PROXY_CONFIG_TOKEN,
       scope: Scope.SINGLETON,
-      multi: true,
       useFactory: () => {
         return {
           context: '/public/',
@@ -90,6 +89,6 @@ createApp({
           },
         };
       },
-    },
+    }),
   ],
 });

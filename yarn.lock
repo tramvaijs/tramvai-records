@@ -1231,6 +1231,11 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
+"@codesandbox/utils@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@codesandbox/utils/-/utils-1.0.2.tgz#2fd6c02d619df79ac08f59a92eddaee6f70eae4d"
+  integrity sha512-6F+KS+/JVtgWreEy+xCL/OwxjeO5RrQNKcGTO5PfW6xo45z17TngJlmvXDHbOP8UVp+YJuUavuh4fIUTQwLz5g==
+
 "@csstools/cascade-layer-name-parser@^1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@csstools/cascade-layer-name-parser/-/cascade-layer-name-parser-1.0.5.tgz#c4d276e32787651df0007af22c9fa70d9c9ca3c2"

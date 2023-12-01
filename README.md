@@ -2,6 +2,8 @@
 
 Example application with View Transitions API support. Based on [Astro Records](https://github.com/Charca/astro-records).
 
+[Interactive demo](https://98hksz-3000.csb.app).
+
 ## Install dependencies
 
 Run installation with selected package manager `yarn`

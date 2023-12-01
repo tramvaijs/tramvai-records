@@ -2,13 +2,14 @@
   "name": "tramvai-records",
   "license": "MIT",
   "scripts": {
-    "start": "ASSETS_PREFIX=${SANDBOX_URL}public/ tramvai start tramvai-records",
-    "build": "ASSETS_PREFIX=${SANDBOX_URL}public/ tramvai build tramvai-records",
-    "preview": "ASSETS_PREFIX=${SANDBOX_URL}public/ tramvai start-prod tramvai-records",
+    "start": "ASSETS_PREFIX=$(node ./tools/generate-assets-prefix.js) tramvai start tramvai-records",
+    "build": "ASSETS_PREFIX=$(node ./tools/generate-assets-prefix.js) tramvai build tramvai-records",
+    "preview": "ASSETS_PREFIX=$(node ./tools/generate-assets-prefix.js) tramvai start-prod tramvai-records",
     "analyze": "tramvai analyze tramvai-records",
     "lint": "eslint --ext .ts,.tsx --ignore-path .gitignore ."
   },
   "devDependencies": {
+    "@codesandbox/utils": "1.0.2",
     "@tinkoff/eslint-config": "^2.0.0",
     "@tinkoff/eslint-config-react": "^2.0.0",
     "@tinkoff/eslint-plugin-tramvai": "^0.6.7",
