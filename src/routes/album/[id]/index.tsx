@@ -61,14 +61,14 @@ const Album: PageComponent = () => {
             </button>
 
             {isNextVisible && (
-              <button
-                type="button"
-                className="text-pink-600 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-lg px-10 py-3 text-center inline-flex items-center dark:focus:ring-gray-500 mr-4"
-              >
-                <Link url={nextRouteUrl} viewTransition>
+              <Link url={nextRouteUrl} viewTransition>
+                <button
+                  type="button"
+                  className="text-pink-600 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-lg px-10 py-3 text-center inline-flex items-center dark:focus:ring-gray-500 mr-4"
+                >
                   Next
-                </Link>
-              </button>
+                </button>
+              </Link>
             )}
           </div>
         </div>
